@@ -1,0 +1,74 @@
+/*
+색상코드
+주황색:#ff9f1c
+연한주황색:#ffbf69
+연한민트색:#cbf3f0
+민트색:2ec4b6
+*/
+.wrapper{
+
+}
+.container:after{ 
+	content:""; 
+	clear:both; 
+	display:block; 
+}
+.container{
+	width:1650px;
+	margin:40px auto;
+}
+#container-left,#container-right{
+	border:2px solid #ff9f1c;
+	height:870px;
+	border-radius: 30px;
+}
+#container-left{
+	width:1000px;
+	float:left;
+}
+#container-right{
+	background-color: #ff9f1c;
+	width:600px;
+	float:right;
+}
+#menu-container{
+	margin:20px auto;
+	border-radius: 25px;
+	border:1px solid #ff9f1c;
+	background-color: #ffffff;
+	width:90%;
+	height:100px;
+}
+.row{
+	margin-bottom:15px;
+	text-align: center;
+}
+.item,.item>img{
+	border-radius: 10px;
+	width:155px;
+	height: 155px;
+}
+.item{
+	background-color: #ffffff;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: inline-block;
+	/*border: 1px solid #ffffff;*/
+}
+.item>img{
+	opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    cursor: move;
+    touch-action: none;
+    user-select: none;
+	z-index: 1;
+}
+/*.drag
+{
+	position:absolute; 
+	left:0px; 
+	top:0px; 
+	cursor:pointer; 
+	cursor:hand;
+}
+*/
