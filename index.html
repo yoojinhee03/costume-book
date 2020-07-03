@@ -12,9 +12,21 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="container">
+		<!-- 드래그 범위 -->
+		<div class="container" style="margin-top:40px;">
 			<div id="container-left">
-			
+
+				<div class="model">
+					<div id="topDrop" class="top drop" style="left:116px; top:323px;">
+					
+					</div>
+					<div id="bottomDrop" class="bottom drop" style="left:173px; top:478px;">
+					
+					</div>
+					<img src="images/model/model1.png" alt="">
+					
+				</div>
+				
 			</div>
 			<div id="container-right">
 				<div id="menu-container">
@@ -22,19 +34,28 @@
 				</div>
 				<div id="item-container">
 					<div class="row">
-						<div class="item">
-							<IMG class="drag" src="images/test.PNG">
+						<div class="item item-top">
+							<IMG id="top" class="drag" src="images/top/top1.png">
 						</div>
-						<div class="item">
-							
+						<div class="item item-bottom">
+							<IMG id="bottom" class="drag" src="images/test.PNG">
 						</div>
-						<div class="item">
-							
+					</div>
+					<div class="row">
+						<div class="item item-top">
+							<IMG id="top" class="drag" src="images/top/top1.png">
+						</div>
+						<div class="item item-bottom">
+							<IMG id="bottom" class="drag" src="images/test.PNG">
 						</div>
 					</div>
 				</div>
+				<div id="bottom-container">
+					<!-- <input type="button" id="item-reset" value="reset" onclick="itemReset()"> -->
+				</div>
 			</div>
 		</div>
+		<!-- 드래그 범위 -->
 	</div>
 </body>
 </html>

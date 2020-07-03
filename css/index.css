@@ -5,39 +5,81 @@
 연한민트색:#cbf3f0
 민트색:2ec4b6
 */
-.wrapper{
-
+html,body{
+	margin: 0;
+    padding: 0;
+    height: 100%;
 }
-.container:after{ 
+.wrapper{
+	overflow: auto;
+	width:100%;
+	height: 100%;
+	background-position: center;
+	background-image: url("../images/test.png");
+    background-repeat : no-repeat;
+    background-size : cover;
+	/*border:1px solid gray;/*/
+}
+.container-right:after,.wrapper:after,.container:after{ 
 	content:""; 
 	clear:both; 
 	display:block; 
 }
 .container{
 	width:1650px;
-	margin:40px auto;
-}
-#container-left,#container-right{
-	border:2px solid #ff9f1c;
-	height:870px;
-	border-radius: 30px;
 }
 #container-left{
-	width:1000px;
 	float:left;
+	/*border:1px solid gray;*/
+	width:1000px;
+	height:870px;
+	text-align: center;
 }
+#container-left>.model{
+	position: relative;
+	top:150px;
+	width:500px;
+	height: 714px;
+	/*border:1px solid gray;*/
+	display: inline-block;
+}
+#topDrop,.item-top>img{
+	width:270px;
+}
+#bottomDrop,.item-bottom>img{
+	width:155px;
+}
+#topDrop,#bottomDrop{
+	/*border: 1px solid gray;*/
+	height: 155px;
+	position:absolute;
+	border-radius: 10px;
+}
+.model>img{
+	width: 100%;
+	height: 100%;
+}
+
 #container-right{
-	background-color: #ff9f1c;
+	/*border:2px solid #ff9f1c;*/
+	height:870px;
+	border-radius: 30px;
 	width:600px;
 	float:right;
 }
+
 #menu-container{
+	float:left;
 	margin:20px auto;
 	border-radius: 25px;
-	border:1px solid #ff9f1c;
+	/*border:1px solid #ff9f1c;*/
 	background-color: #ffffff;
-	width:90%;
+	width:20%;
 	height:100px;
+}
+#item-container{
+	float:right;
+	height: 70%;
 }
 .row{
 	margin-bottom:15px;
@@ -45,23 +87,30 @@
 }
 .item,.item>img{
 	border-radius: 10px;
-	width:155px;
-	height: 155px;
+	/*width:155px;*/
+	height: 157px;
 }
 .item{
 	background-color: #ffffff;
 	margin-left: 10px;
 	margin-right: 10px;
 	display: inline-block;
+	/*position: relative;*/
 	/*border: 1px solid #ffffff;*/
 }
 .item>img{
+	/*position: absolute;*/
+	/*left: 0px;*/
+	/*display: flex;*/
 	opacity: 1;
     transform: translate3d(0px, 0px, 0px);
-    cursor: move;
+    cursor: pointer;
     touch-action: none;
     user-select: none;
 	z-index: 1;
+}
+.item-top{
+
 }
 /*.drag
 {
