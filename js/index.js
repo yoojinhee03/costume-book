@@ -45,13 +45,20 @@ document.addEventListener('DOMContentLoaded', function(){
       this.target.className="drag";
       var dragThing = this;
       var i = droppables.length;
-      console.log(i);
+      let item=document.getElementsByClassName("item-"+this.target.id);
+      for(let i=0; i<item.length; i++){
+        console.log("change"+item[i].children[0].className);
+        if(item[i].children[0].className=="complete"){
+          change(item[i].children[0]);
+        }
+      }
+      
 
       while(--i > -1){
         if(this.hitTest(droppables[i], '10%')) {
           var result = onDrop(this.target, droppables[i], dragThing);
           if(result == 'correct'){
-            console.log("correct");
+            console.log(dragThing);
             //totalHits++;
             // if(totalHits == totalItems){
                //winGame();
@@ -69,6 +76,14 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 });
 
+function change(prevItem){
+  document.getElementById(prevItem.id+"Img").src="";
+  prevItem.className="drag";
+  TweenMax.to(prevItem, .5, {
+    x: 0,
+    y: 0
+  })
+}
 function onDrop(dragged, dropped, dragObj) {//.drag , .drop , 
   if((dragged.id + "Drop") == dropped.id){
    dragged.className="complete";
