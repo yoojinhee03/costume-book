@@ -105,8 +105,7 @@ html,body{
 }
 .item,.item>img{
 	border-radius: 10px;
-	/*width:155px;*/
-	height: 157px;
+	height: 155px;
 }
 .item{
 	background-color: #ffffff;
