@@ -1,5 +1,7 @@
 //HTML 이 모두 로드되고, DOM 트리가 완성되었지만
 //외부 리소스(img etc) 가 아직 로드되어지지 않았을 때 DOMContentLoaded 사용
+
+
 document.addEventListener('DOMContentLoaded', function(){
 
   //class가 drag인 요소 (이미지) 반환
@@ -9,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   var droppables = selectAll('.drop');
   //alert(droppables[0].src);
-   
+  
   Draggable.create(".drag", {
     bounds: '.container',//드래그 범위
 
@@ -19,6 +21,10 @@ document.addEventListener('DOMContentLoaded', function(){
       console.log("this.x"+this.x)
       //itemReset();
       //this.target.className="dragging";
+      if(this.x!=0&&this.y!=0){
+        console.log(this.target.id);
+        document.getElementById(this.target.id+"Img").src="";
+      }
       if(this.target.className=="complete"){ 
         this.enable();
       }
@@ -35,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     },
     onDragEnd: function(){
-    	console.log("onDragEnd");
-      //this.target.className="drag";
+      // this.target.parentNode.classList.add("complete");
+      this.target.className="drag";
       var dragThing = this;
       var i = droppables.length;
       console.log(i);
@@ -44,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function(){
       while(--i > -1){
         if(this.hitTest(droppables[i], '10%')) {
           var result = onDrop(this.target, droppables[i], dragThing);
-
           if(result == 'correct'){
             console.log("correct");
             //totalHits++;
@@ -77,8 +82,8 @@ function onDrop(dragged, dropped, dragObj) {//.drag , .drop ,
       y: dragObj.offsetTop+dropped.offsetTop+model.offsetTop,//38 : container의 margin값 
       x: dragObj.offsetLeft+dropped.offsetLeft+model.offsetLeft,
       onComplete: function(){
-        //var dropImg=dropped.appendChild(document.createElement("img"));
-        //dropImg.src="images/test.png";
+        var dropImg=document.getElementById(dragged.id+"Img");
+        dropImg.src=document.getElementById(dragged.id).src;
         // TweenMax.to(dragged, .5, {
         //   delay: .5,
         //   opacity: 0,

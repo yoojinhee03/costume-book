@@ -9,8 +9,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/utils/Draggable.min.js"></script>
 	<script src="js/index.js"></script>
+	<script src="js/item.js"></script>
 </head>
-<body>
+<body onload="changeItem('item-top',0)">
 	<div class="wrapper">
 		<!-- 드래그 범위 -->
 		<div class="container" style="margin-top:40px;">
@@ -18,10 +19,10 @@
 
 				<div class="model">
 					<div id="topDrop" class="top drop" style="left:116px; top:323px;">
-					
+					<img id="topImg" src="" alt="">
 					</div>
 					<div id="bottomDrop" class="bottom drop" style="left:173px; top:478px;">
-					
+					<img id="bottomImg" src="" alt="">
 					</div>
 					<img src="images/model/model1.png" alt="">
 					
@@ -30,20 +31,32 @@
 			</div>
 			<div id="container-right">
 				<div id="menu-container">
-					
+					<a href="#" onclick="changeItem('item-top',0)">
+						<div class="menu">
+							<img src="images/test.PNG" alt="">
+						</div>
+					</a>
+					<a href="#" onclick="changeItem('item-bottom',1)">
+						<div class="menu">
+							<img src="images/test.PNG" alt="">
+						</div>
+					</a>
 				</div>
 				<div id="item-container">
 					<div class="row">
-						<div class="item item-top">
+						<div class="item item-top" >
 							<IMG id="top" class="drag" src="images/top/top1.png">
 						</div>
-						<div class="item item-bottom">
-							<IMG id="bottom" class="drag" src="images/test.PNG">
+						<div class="item item-top">
+							<IMG id="top" class="drag" src="images/top/top1.png">
 						</div>
 					</div>
 					<div class="row">
-						<div class="item item-top">
-							<IMG id="top" class="drag" src="images/top/top1.png">
+						<div class="item item-bottom">
+							<IMG id="bottom" class="drag" src="images/test.PNG">
+						</div>
+						<div class="item item-bottom">
+							<IMG id="bottom" class="drag" src="images/test.PNG">
 						</div>
 						<div class="item item-bottom">
 							<IMG id="bottom" class="drag" src="images/test.PNG">
