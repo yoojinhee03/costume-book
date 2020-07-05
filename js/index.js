@@ -45,13 +45,9 @@ document.addEventListener('DOMContentLoaded', function(){
       this.target.className="drag";
       var dragThing = this;
       var i = droppables.length;
+
       let item=document.getElementsByClassName("item-"+this.target.id);
-      for(let i=0; i<item.length; i++){
-        console.log("change"+item[i].children[0].className);
-        if(item[i].children[0].className=="complete"){
-          change(item[i].children[0]);
-        }
-      }
+
       
 
       while(--i > -1){
@@ -63,6 +59,14 @@ document.addEventListener('DOMContentLoaded', function(){
             // if(totalHits == totalItems){
                //winGame();
             // }
+            for(let i=0; i<item.length; i++){
+              console.log("change"+item[i].children[0].className);
+              if(item[i].children[0].className=="complete"){
+                change(item[i].children[0]);
+                break;
+              }
+            }
+            this.target.className="complete";
           }
           break;
         } else {
@@ -86,7 +90,7 @@ function change(prevItem){
 }
 function onDrop(dragged, dropped, dragObj) {//.drag , .drop , 
   if((dragged.id + "Drop") == dropped.id){
-   dragged.className="complete";
+   // dragged.className="complete";
     console.log("dragObj x:"+dragObj.offsetLeft+"dragObj y : "+dragObj.offsetTop);
     console.log("x:"+dropped.offsetLeft+"y : "+dropped.offsetTop);
     var model=document.getElementsByClassName("model")[0];
