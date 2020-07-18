@@ -10,22 +10,28 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   var droppables = selectAll('.drop');
-  //alert(droppables[0].src);
+  // alert(droppables[0].src);
   
   Draggable.create(".drag", {
-    bounds: '.container',//드래그 범위
+    // bounds: 'body',//드래그 범위
 
     edgeResistance:0.65,
     onPress: function(){
       console.log("this.x"+this.x)
       console.log("this.x"+this.x)
+
+      
+
       //itemReset();
       //this.target.className="dragging";
       if(this.x!=0&&this.y!=0){
         console.log(this.target.id);
         document.getElementById(this.target.id+"Img").src="";
+        this.target.style.width="100%";
+        this.target.style.height="100%";
       }
-      if(this.target.className=="complete"){ 
+
+      if(this.target.className=="complete"+this.target.id){ 
         this.enable();
       }
     	console.log("onPress");
@@ -61,12 +67,14 @@ document.addEventListener('DOMContentLoaded', function(){
             // }
             for(let i=0; i<item.length; i++){
               console.log("change"+item[i].children[0].className);
-              if(item[i].children[0].className=="complete"){
+              if(item[i].children[0].className=="complete"+this.target.id){
                 change(item[i].children[0]);
                 break;
               }
             }
-            this.target.className="complete";
+            this.target.className="complete"+this.target.id;
+            this.target.style.width =document.getElementById(this.target.id+"Drop").style.width;
+            this.target.style.height="auto";
           }
           break;
         } else {
@@ -83,6 +91,8 @@ document.addEventListener('DOMContentLoaded', function(){
 function change(prevItem){
   document.getElementById(prevItem.id+"Img").src="";
   prevItem.className="drag";
+  prevItem.style.width="100%";
+  prevItem.style.height="100%";
   TweenMax.to(prevItem, .5, {
     x: 0,
     y: 0
@@ -101,8 +111,19 @@ function onDrop(dragged, dropped, dragObj) {//.drag , .drop ,
       y: dragObj.offsetTop+dropped.offsetTop+model.offsetTop,//38 : container의 margin값 
       x: dragObj.offsetLeft+dropped.offsetLeft+model.offsetLeft,
       onComplete: function(){
+        // alert(dragged.id);
         var dropImg=document.getElementById(dragged.id+"Img");
-        dropImg.src=document.getElementById(dragged.id).src;
+        var dragImg=document.getElementsByClassName(dragged.id+"Drag");
+        // for(let i=0; i<dragImg.length; i++){
+        //     dragImg[i].index=i;
+        //     dragImg[i].onmouseover = function(){
+        //     alert(dragImg[i].index); // 내 자신의 index 번호를 뽑고 싶습니다 ㅜㅜ
+        //     // break;
+        //   }
+        // }
+        // dragged.
+        // dragImg.classList.add()
+        dropImg.src=document.getElementsByClassName("complete"+dragged.id)[0].src;
         // TweenMax.to(dragged, .5, {
         //   delay: .5,
         //   opacity: 0,

@@ -6,6 +6,7 @@
 	<style>
 		@import url("css/index.css");
 	</style>
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/utils/Draggable.min.js"></script>
 	<script src="js/index.js"></script>
@@ -21,40 +22,47 @@
 			<div id="container-left">
 
 				<div class="model">
-					<div id="topDrop" class="top drop" style="left:116px; top:323px;">
+
+					<div id="topDrop" class="top drop" style="left:46px; top:330px;width:270px">
 					<img id="topImg" src="" alt="">
 					</div>
-					<div id="bottomDrop" class="bottom drop" style="left:173px; top:478px;">
+					<div id="bottomDrop" class="bottom drop" style="left:100px; top:468px;width:160px">
 					<img id="bottomImg" src="" alt="">
 					</div>
-					<img src="images/model/model1.png" alt="">
+					<div id="hairDrop" class="hair drop" style="left:15px; top:-10px; width:330px">
+					<img id="hairImg" src="" alt="">
+					</div>
+					<div id="lip" class="lip" style="left:15px; top:-30px; width:330px">
+					<img id="hairImg" src="" alt="">
+					</div>
+					<img src="images/model/model.png" alt="">
 					
 				</div>
 				
 			</div>
 			<div id="container-right">
 				<div id="menu-container">
-					<a href="#" onclick="changeItem('item-top',0)">
+					<a href="#" onclick="changeItem('top',0)">
 						<div class="menu">
 							<img src="images/test.PNG" alt="">
 						</div>
 					</a>
-					<a href="#" onclick="changeItem('item-bottom',1)">
+					<a href="#" onclick="changeItem('bottom',1)">
 						<div class="menu">
 							<img src="images/test.PNG" alt="">
 						</div>
 					</a>
-					<a href="#" onclick="changeItem('item-hair',2)">
+					<a href="#" onclick="changeItem('hair',2)">
 						<div class="menu">
 							<img src="images/test.PNG" alt="">
 						</div>
 					</a>
-					<a href="#" onclick="changeItem('item-shoes',3)">
+					<a href="#" onclick="changeItem('shoes',3)">
 						<div class="menu">
 							<img src="images/test.PNG" alt="">
 						</div>
 					</a>
-					<a href="#" onclick="changeItem('item-makeUp',4)">
+					<a href="#" onclick="changeItem('makeUp',4)">
 						<div class="menu">
 							<img src="images/test.PNG" alt="">
 						</div>
@@ -66,20 +74,62 @@
 							<IMG id="top" class="drag" src="images/top/top1.png">
 						</div>
 						<div class="item item-top">
-							<IMG id="top" class="drag" src="images/top/top1.png">
+							<IMG id="top" class="drag" src="images/top/top2.png">
+						</div>
+						<div class="item item-top">
+							<IMG id="top" class="drag" src="images/top/top3.png">
+						</div>
+						<div class="item item-top">
+							<IMG id="top" class="drag" src="images/top/top4.png">
 						</div>
 					</div>
 					<div class="row">
 						<div class="item item-bottom">
-							<IMG id="bottom" class="drag" src="images/test.PNG">
+							<IMG id="bottom" class="drag" src="images/bottom/bottom1.png">
 						</div>
 						<div class="item item-bottom">
-							<IMG id="bottom" class="drag" src="images/test.PNG">
+							<IMG id="bottom" class="drag" src="images/bottom/bottom2.png">
 						</div>
 						<div class="item item-bottom">
-							<IMG id="bottom" class="drag" src="images/test.PNG">
+							<IMG id="bottom" class="drag" src="images/bottom/bottom3.png">
+						</div>
+						<div class="item item-bottom">
+							<IMG id="bottom" class="drag" src="images/bottom/bottom4.png">
+						</div>
+						<div class="item item-bottom">
+							<IMG id="bottom" class="drag" src="images/bottom/bottom5.png">
 						</div>
 					</div>
+
+					<div class="row">
+						<div class="item item-hair">
+							<IMG id="hair" class="drag" src="images/hair/hair1.png">
+						</div>
+						<div class="item item-hair">
+							<IMG id="hair" class="drag" src="images/hair/hair2.png">
+						</div>
+						<div class="item item-hair">
+							<IMG id="hair" class="drag" src="images/hair/hair3.png" onmouse>
+						</div>
+						<div class="item item-hair">
+							<IMG id="hair" class="drag" src="images/hair/hair4.png">
+						</div>
+
+					</div>
+					<!-- <div class="row">
+						<div class="item item-hair">
+							<IMG id="hair" class="drag" src="images/hair/hair1.png">
+						</div>
+						<div class="item item-hair">
+							<IMG id="hair" class="drag" src="images/hair/hair2.png">
+						</div>
+						<div class="item item-hair">
+							<IMG id="hair" class="drag" src="images/hair/hair3.png" onmouse>
+						</div>
+						<div class="item item-hair">
+							<IMG id="hair" class="drag" src="images/hair/hair4.png">
+						</div>
+					</div> -->
 				</div>
 				<div id="bottom-container">
 					<!-- <input type="button" id="item-reset" value="reset" onclick="itemReset()"> -->

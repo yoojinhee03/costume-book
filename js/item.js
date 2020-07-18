@@ -15,7 +15,7 @@ function changeItem(id,idx){
     		items[i].children[j].style.display="none";
     	}
     }
-    for(let i=0; i<complete.length; i++){
-    	complete[i].style.display="inline-block";
-    }
+    // for(let i=0; i<complete.length; i++){
+    // 	complete[i].style.display="inline-block";
+    // }
 }
