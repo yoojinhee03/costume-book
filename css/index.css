@@ -9,7 +9,7 @@ html,body{
 	width:100%;
 	height: 100%;
 	background-position: center;
-	background-image: url("../images/background/background2.png");
+	background-image: url("../images/background/background1.png");
     background-repeat : no-repeat;
     background-size : cover;
 	/*border:1px solid gray;/*/
@@ -44,7 +44,6 @@ html,body{
 	position: relative;
 	top:100px;
   left: 150px;
-	/*width:400px;*/
 	height: 715px;
 	/*border:1px solid gray;*/
 	display: inline-block;
@@ -52,19 +51,16 @@ html,body{
 .drop>img{
 	width: 100%;
   z-index: 100;
-	/*height: 100%;*/
 }
 #model>img{
   z-index: -100;
 }
 .drop,.item{
   /*border: 1px solid gray;*/
-  /*position: relative;*/
 	width:155px;
 }
 .item img{
   width:100%;
-  /*position: absolute;*/
 }
 #topDrop{
   height: 135px;
@@ -79,7 +75,7 @@ html,body{
 	border-radius: 10px;
 }
 .model>img{
-	width: 100%;
+	/*width: 100%;*/
 	height: 100%;
 }
 
@@ -99,19 +95,12 @@ html,body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /*align-items: center;*/
   transform: translateY(-50%);
-	/*margin:20px auto;*/
-	/*border-radius: 40px;*/
-	/*border:1px solid black;*/
-	/*background-color: #ffffff;*/
 	width:23%;
 	height:95%;
 }
 
 #menu-container>.menu{
-  /*display: inline-block;*/
-	/*margin-bottom: 50px;*/
 	/*border:1px solid black;*/
 	width: 135px;
 	height: 135px;
@@ -133,43 +122,30 @@ html,body{
 .row{
   margin: 10px auto 0 auto;
   width:380px;
-	/*margin-bottom:16px;*/
-	/*text-align: center;*/
 }
 .item,.item>img{
 	border-radius: 10px;
 	height: 155px;
-  /*z-index: 10;*/
 }
 .item{
-  /*overflow: hidden;*/
 	background-color: #eaeaea;
 	
   margin:10px 15px;
 	display: inline-block;
-	/*position: relative;*/
 	/*border: 1px solid #ffffff;*/
 }
 .item>img{
-	/*position: absolute;*/
-	/*left: 0px;*/
-	/*display: flex;*/
 	opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-    cursor: pointer;
-    touch-action: none;
-    user-select: none;
+  transform: translate3d(0px, 0px, 0px);
+  cursor: pointer;
+  touch-action: none;
+  user-select: none;
 	z-index: 1;
-}
-.item-top{
-
 }
 .drag
 {
 	transform: translate3d(0px,0px,0px);
 }
-
-
 
 .content {
   height: 100%;
@@ -186,8 +162,7 @@ html,body{
   top: 0;
   left: 0;
   pointer-events: none;
-  /*z-index: 20;*/
-}
+ㅇ}
 
 .main-text {
   padding: 20vh 20px 0 20px;
