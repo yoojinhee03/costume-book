@@ -15,16 +15,17 @@
 	<script src="js/capture.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/item.js"></script>
-	<script src="js/effect.js"></script>
+	<!-- <script src="js/effect.js"></script> -->
 
 </head>
 <body onload="changeItem('item-top',0)">
-	<!-- <canvas class="snow" id="snow"></canvas> -->
+	
 	<div class="wrapper">
 		<!-- 드래그 범위 -->
 
 		<div class="container" style="margin-top:40px;">
 			<div id="container-left">
+				<!-- <canvas class="snow" id="snow"></canvas> -->
 				<div class="menu">
 					<div class="camera" onclick="partShot()">
 						<img src="images/menu/camera.png" alt="">
@@ -35,22 +36,19 @@
 				</div>
 				<div class="model" id="model">
 					<img src="images/model/model.png" alt="">
-					<div id="topDrop" class="top drop" style="left:48px; top:308px;width:250px">
+					<div id="topDrop" class="top drop" style="left:18px; top:325px;width:320px">
 					<img id="topImg" src="" alt="">
 					</div>
-					<div id="bottomDrop" class="bottom drop" style="left:91px; top:440px;width:160px">
+					<div id="bottomDrop" class="bottom drop" style="left:30px; top:455px;width:300px">
 					<img id="bottomImg" src="" alt="">
 					</div>
-					<div id="hairDrop" class="hair drop" style=" left:15px; top:-10px; width:310px">
+					<div id="hairDrop" class="hair drop" style=" left:24px; top:-2px; width:310px">
 					<img id="hairImg" src="" alt="">
 					</div>
 					<div id="lip" class="lip" style="left:15px; top:-50px; width:330px">
 					<img id="hairImg" src="" alt="">
 					</div>
-					
-					
 				</div>
-				
 			</div>
 			<div id="container-right">
 				<div id="menu-container">
@@ -93,6 +91,9 @@
 						</div>
 						<div class="item item-top">
 							<IMG id="top" class="drag" src="images/top/top4.png">
+						</div>
+						<div class="item item-top">
+							<IMG id="top" class="drag" src="images/top/top5.png">
 						</div>
 					</div>
 					<div class="row">
