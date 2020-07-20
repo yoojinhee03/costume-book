@@ -9,7 +9,7 @@ html,body{
 	width:100%;
 	height: 100%;
 	background-position: center;
-	background-image: url("../images/test.PNG");
+	background-image: url("../images/background/background2.png");
     background-repeat : no-repeat;
     background-size : cover;
 	/*border:1px solid gray;/*/
@@ -29,9 +29,21 @@ html,body{
 	height:870px;
 	text-align: center;
 }
-#container-left>.model{
+#container-left>.menu{
+  position: absolute;
+  left:60px;
+  top:100px;
+/*/  border: 1px solid gray;*/
+  display: inline-block;
+  
+}
+.menu .camera{
+  margin-bottom: 20px;
+}
+.model{
 	position: relative;
-	top:150px;
+	top:100px;
+  left: 150px;
 	/*width:400px;*/
 	height: 715px;
 	/*border:1px solid gray;*/
@@ -39,16 +51,20 @@ html,body{
 }
 .drop>img{
 	width: 100%;
+  z-index: 100;
 	/*height: 100%;*/
 }
-
+#model>img{
+  z-index: -100;
+}
 .drop,.item{
-  border: 1px solid gray;
-
+  /*border: 1px solid gray;*/
+  /*position: relative;*/
 	width:155px;
 }
 .item img{
   width:100%;
+  /*position: absolute;*/
 }
 #topDrop{
   height: 135px;
@@ -71,7 +87,7 @@ html,body{
 	/*border:2px solid #ff9f1c;*/
 	height:870px;
 	border-radius: 30px;
-	width:750px;
+	width:600px;
 	float:right;
 }
 
@@ -87,17 +103,17 @@ html,body{
   transform: translateY(-50%);
 	/*margin:20px auto;*/
 	/*border-radius: 40px;*/
-	border:1px solid black;
+	/*border:1px solid black;*/
 	/*background-color: #ffffff;*/
-	width:18%;
+	width:23%;
 	height:95%;
 }
 
-.menu{
+#menu-container>.menu{
   /*display: inline-block;*/
 	/*margin-bottom: 50px;*/
-	border:1px solid black;
-	width: 100%;
+	/*border:1px solid black;*/
+	width: 135px;
 	height: 135px;
 }
 .menu>img,.menu{
@@ -109,10 +125,14 @@ html,body{
 }
 #item-container{
 	float:right;
-	height: 70%;
-  width:600px;
+	height: 100%;
+  width:450px;
+  border-radius: 20px;
+  background-color: #3b3b3b;
 }
 .row{
+  margin: 10px auto 0 auto;
+  width:380px;
 	/*margin-bottom:16px;*/
 	/*text-align: center;*/
 }
@@ -123,9 +143,9 @@ html,body{
 }
 .item{
   /*overflow: hidden;*/
-	background-color: #ffffff;
+	background-color: #eaeaea;
 	
-  margin:0 10px;
+  margin:10px 15px;
 	display: inline-block;
 	/*position: relative;*/
 	/*border: 1px solid #ffffff;*/

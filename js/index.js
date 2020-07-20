@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', function(){
       console.log("this.x"+this.x)
       console.log("this.x"+this.x)
 
-      
+      console.log(this.target.parentElement);
+      // alert(this.target.parentElement);
 
       //itemReset();
       //this.target.className="dragging";
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function(){
       var i = droppables.length;
 
       let item=document.getElementsByClassName("item-"+this.target.id);
-
+      
       
 
       while(--i > -1){
@@ -75,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function(){
             this.target.className="complete"+this.target.id;
             this.target.style.width =document.getElementById(this.target.id+"Drop").style.width;
             this.target.style.height="auto";
+            this.target.parentElement.style.overflow="hidden";
           }
           break;
         } else {
@@ -90,6 +92,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function change(prevItem){
   document.getElementById(prevItem.id+"Img").src="";
+  console.log(prevItem);
+  prevItem.parentElement.style.overflow="visible";
   prevItem.className="drag";
   prevItem.style.width="100%";
   prevItem.style.height="100%";
