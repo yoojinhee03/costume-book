@@ -79,6 +79,9 @@ html,body{
   height: auto;
   margin : 0 5px;
 }
+#blush{
+  width:90px;
+}
 .item-makeUp div{
   position: absolute;
   /*display: inline-block;*/
