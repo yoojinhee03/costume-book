@@ -59,8 +59,36 @@ html,body{
   /*border: 1px solid gray;*/
 	width:155px;
 }
+
 .item img{
   width:100%;
+  border-radius: 10px;
+  height: 155px;
+}
+
+.item-makeUp{
+  width:400px;
+  margin:10px auto !important;
+  position: relative;
+  text-align: center;
+  
+}
+
+.item-makeUp img{
+  width: auto;
+  height: auto;
+  margin : 0 5px;
+}
+.item-makeUp div{
+  position: absolute;
+  /*display: inline-block;*/
+  /*margin:0 auto;*/
+  width:400px;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: space-between;
 }
 #topDrop{
   height: 135px;
@@ -121,16 +149,16 @@ html,body{
 }
 .row{
   margin: 10px auto 0 auto;
-  width:380px;
+  width:400px;
 }
-.item,.item>img{
+.item{
 	border-radius: 10px;
 	height: 155px;
 }
 .item{
 	background-color: #eaeaea;
 	
-  margin:10px 15px;
+  margin:15px 20px;
 	display: inline-block;
 	/*border: 1px solid #ffffff;*/
 }
